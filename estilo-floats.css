@@ -414,6 +414,7 @@ hr {
 .formulario input[type="text"] {
     border: none;
     background-color: transparent;
+
 }
 
 .formulario input::placeholder {
