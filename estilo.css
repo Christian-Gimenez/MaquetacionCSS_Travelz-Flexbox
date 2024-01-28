@@ -228,12 +228,42 @@ section:first-of-type>div:first-child>button>span {
     font-size: 14px;
 }
 
+section:first-of-type>hr {
+    display: none;
+}
+
+@media (min-width: 750px) {
+    section:first-of-type>div:first-child {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    section:first-of-type>div:first-child>button {
+        margin-right: 20px;
+    }
+
+    section:first-of-type>div:first-child>div {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin-left: 20px;
+    }
+
+    section:first-of-type>hr {
+        display: block;
+        border: 1px solid var(--principal);
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
 /*Inputs formularios*/
 section:first-of-type>form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    width: 100%;
 }
 
 section:first-of-type>form>hr {
@@ -303,11 +333,66 @@ section:first-of-type>form>div:last-of-type>button {
     gap: 20px;
 }
 
+@media (min-width: 1024px) {
+    section:first-of-type {
+        min-height: 190px;
+    }
+
+    section:first-of-type>form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0;
+    } 
+
+    section:first-of-type>form>div {
+        width: 10%;
+        margin-left: 10px;
+    }
+
+    section:first-of-type>form>div:nth-last-child(2) {
+        width: 65%;
+        padding-left: 50px;
+        margin-top: 25px;
+        justify-content: space-between;
+    }
+
+    section:first-of-type>form>div:nth-last-child(2)>label {
+        font-size: 18px;
+    }
+
+    section:first-of-type>form>div:nth-last-child(2)>label>input {
+        width: 20px;
+    }
+
+    section:first-of-type>form>div:last-child {
+        width: 25%;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        margin-top: 25px;
+    }
+
+    section:first-of-type>form>div:last-of-type>button {
+        font-size: 20px;
+        gap: 10px;
+        width: 140px;
+    }
+
+    section:first-of-type>form>hr {
+        width: 89px;
+        transform: rotate(90deg);
+        margin-left: 8%;
+        margin-right: -5%;
+    }
+}
+
 /*Destinos destacados (cards)*/
 section:nth-of-type(2) {
     display: flex;
     flex-direction: column;
 }
+
 section:nth-of-type(2)>div {
     display: flex;
     flex-direction: column;
@@ -338,6 +423,18 @@ section:nth-of-type(2)>div>article>img {
     margin-left: 10px;
 }
 
+@media (min-width: 750px){
+    section:nth-of-type(2)>div {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    section:nth-of-type(2)>div>article {
+        max-width:  45%;
+        min-height: 100px;
+    }
+}
+
 /*Contenido interno cards*/
 section:nth-of-type(2)>div>article>div {
     display: flex;
@@ -362,6 +459,7 @@ section:nth-of-type(2)>div>article>div>button {
     padding: 5px;
     border-radius: 15px;
     margin-right: 5px;
+    line-height: 0;
 }
 
 section:nth-of-type(2)>div>article>div>div>h2 {
@@ -381,6 +479,56 @@ section:nth-of-type(2)>div>article>div>div>p {
 section:nth-of-type(2)>div>article>div>div>hr {
     border-color: var(--principal);
     margin: 5px 0;
+}
+
+@media (min-width: 750px) {
+    section:nth-of-type(2)>div>article>div>div {
+        margin-left: 6px;
+    }
+
+    section:nth-of-type(2)>div>article>div>button {
+        margin-right: 0;
+        width: 35%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    section:nth-of-type(2) {
+        width: 100%;
+    }
+    section:nth-of-type(2)>div>article {
+        height: 160px;
+    }
+
+    section:nth-of-type(2)>div>article>img {
+        height: 140px;
+        width: 200px;
+    }
+
+    section:nth-of-type(2)>div>article>div>div {
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    section:nth-of-type(2)>div>article>div>div>h2 {
+        font-size: 50px;
+    }
+
+    section:nth-of-type(2)>div>article>div>div>p {
+        font-size: 13px;
+    }
+
+    section:nth-of-type(2)>div>article>div>div>hr {
+        width: 140px;
+    }
+
+    section:nth-of-type(2)>div>article>div>button {
+        font-size: 20px;
+        margin-right: 5px;
+
+    }
+
 }
 
 /*Triangulos ofertas*/
@@ -450,7 +598,7 @@ footer > ul {
     list-style: none;
 }
 
-footer img {
+footer > ul > li> a > img {
     width: 40px;
     margin-top: 15px;
 }
@@ -466,4 +614,26 @@ footer > div > div > a {
     font-size: 19px;
     color: white;
     margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    footer {
+        flex-direction: row;
+    }
+
+    footer > div:first-child {
+        display: block;
+    }
+
+    footer > div:nth-child(3) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    footer > ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
 }
