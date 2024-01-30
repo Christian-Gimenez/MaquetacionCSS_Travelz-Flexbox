@@ -150,7 +150,7 @@ header {
     background-color: var(--principal);
 }
 
-header > button:first-child > img {
+header>button:first-child>img {
     width: 3em;
 }
 
@@ -343,7 +343,7 @@ section:first-of-type>form>div:last-of-type>button {
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 0;
-    } 
+    }
 
     section:first-of-type>form>div {
         width: 10%;
@@ -423,14 +423,14 @@ section:nth-of-type(2)>div>article>img {
     margin-left: 10px;
 }
 
-@media (min-width: 750px){
+@media (min-width: 750px) {
     section:nth-of-type(2)>div {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
     section:nth-of-type(2)>div>article {
-        max-width:  45%;
+        max-width: 45%;
         min-height: 100px;
     }
 }
@@ -438,7 +438,7 @@ section:nth-of-type(2)>div>article>img {
 /*Contenido interno cards*/
 section:nth-of-type(2)>div>article>div {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
     flex: 1 1 0;
 }
 
@@ -446,7 +446,7 @@ section:nth-of-type(2)>div>article>div>div {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    
+
 }
 
 section:nth-of-type(2)>div>article>div>button {
@@ -497,6 +497,7 @@ section:nth-of-type(2)>div>article>div>div>hr {
     section:nth-of-type(2) {
         width: 100%;
     }
+
     section:nth-of-type(2)>div>article {
         height: 160px;
     }
@@ -571,7 +572,7 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 30px 20px 30px;
     background-color: #0E3157;
     color: white;
     font-family: "Readex Pro-ExtraLight";
@@ -579,36 +580,36 @@ footer {
     letter-spacing: 2px;
 }
 
-footer > div:first-child {
+footer>div:first-child>div {
     display: none;
-} 
-
-footer > div:nth-child(3) {
-    display: flex;
-    flex-direction: column;
 }
 
-footer > div:nth-child(3) > div {
-    display: flex;
-    flex-direction: column;
-}
-
-footer > ul {
+footer>div:first-child>ul {
     align-self: center;
     list-style: none;
 }
 
-footer > ul > li> a > img {
+footer>div:first-child>ul>li>a>img {
     width: 40px;
     margin-top: 15px;
 }
 
-footer > div > div > h3 {
+footer>div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+footer>div:last-child>div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer>div:last-child>div>h3 {
     font-size: 28px;
     margin-top: 20px;
 }
 
-footer > div > div > a {
+footer>div:last-child>div>a {
     margin: 10px;
     text-decoration: none;
     font-size: 19px;
@@ -616,24 +617,52 @@ footer > div > div > a {
     margin-bottom: 0;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     footer {
         flex-direction: row;
+        justify-content: space-around;
+        gap: 0;
     }
 
-    footer > div:first-child {
-        display: block;
+    footer>div:first-child {
+        width: 50%;
+        flex-direction: column;
     }
 
-    footer > div:nth-child(3) {
+    footer>div:first-child>div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    footer>div:first-child>div>img {
+        background-color: var(--texto-blanco);
+        padding: 7px;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 22px;
+        margin-right: 10px;
+        border-radius: 20px;
+    }
+
+    footer>div:first-child>div>span {
+        font-family: "Jomhuria";
+        font-weight: 100;
+        font-size: 150px;
+    }
+
+    footer>div:first-child>ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 50px;
+    }
+
+    footer>div:last-child {
+        width: 50%;
         flex-direction: row;
         justify-content: space-between;
-        gap: 50px;
+        gap: 10%;
     }
 
-    footer > ul {
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
-    }
 }
